@@ -1,0 +1,104 @@
+.sectionTitle {
+  text-align: center;
+  width: 520px;
+  margin: 90px auto 0 auto;
+}
+.sectionTitle h2 {
+  font-size: 2em;
+}
+.sectionTitle p {
+  color: var(--sold);
+  padding: 20px 0;
+}
+
+.butArt {
+  color: white;
+  background-color: var(--secondary);
+  padding: 15px;
+  display: block;
+  margin: 20px 0;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.butArt:disabled {
+  background-color: #efefefef;
+  color: grey;
+  cursor: no-drop;
+}
+.selection {
+  margin-top: 40px;
+}
+.butPro {
+  display: block;
+  margin: 50px auto;
+  border: 1px solid var(--secondary);
+  width: 200px;
+  text-align: center;
+  padding: 15px 20px;
+  color: var(--secondary);
+}
+
+.banner-gl {
+  z-index: -1;
+  width: 97%;
+  position: relative;
+  height: 50vh;
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner-back-gl {
+  padding-right: 10px;
+  padding-bottom: 50px;
+  background: var(--primary);
+  position: relative;
+  z-index: -1000;
+}
+.banner-back-gl::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background: white;
+  left: 0;
+  top: 0;
+  z-index: -900;
+}
+.page-info {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 2em;
+}
+.add-to-cart {
+  color: white;
+  background-color: var(--secondary);
+  padding: 15px;
+  display: block;
+  margin: 20px 0;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 550px) {
+  .sectionTitle {
+    width: 100%;
+  }
+  .sectionTitle p {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .banner-back-gl {
+    padding: 0;
+  }
+  .banner-gl {
+    width: 100%;
+  }
+}

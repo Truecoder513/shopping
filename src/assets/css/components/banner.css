@@ -1,0 +1,133 @@
+.banner {
+  z-index: -1;
+  width: 97%;
+  position: relative;
+  height: 115vh;
+  background-image: url(../../img/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.article {
+  position: absolute;
+  background-color: white;
+  width: 35%;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  padding: 40px 50px;
+}
+.article h2 {
+  font-size: 4em;
+  margin: 20px 0;
+}
+.article .brief {
+  margin-bottom: 30px;
+  line-height: 30px;
+  color: var(--lightdark);
+}
+.article .bonus {
+  color: var(--sold);
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+.banner-back {
+  padding-right: 10px;
+  padding-bottom: 50px;
+  background: var(--primary);
+  position: relative;
+  z-index: -1000;
+}
+.banner-back::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background: white;
+  left: 0;
+  top: 0;
+  z-index: -900;
+}
+@media screen and (max-width: 1510px) {
+  .article {
+    left: 5%;
+    width: 45%;
+  }
+  .article h2 {
+    font-size: 3.8em;
+  }
+}
+@media screen and (max-width: 1134px) {
+  .article {
+    left: 10%;
+    width: 70%;
+  }
+  .article h2 {
+    font-size: 3.4em;
+  }
+  .article .brief {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 806px) {
+  .article {
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+  }
+  .article h2 {
+    font-size: 2.5em;
+  }
+  .article .brief {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 585px) {
+  .banner-back {
+    background-color: transparent;
+  }
+  .banner {
+    width: 100vw;
+  }
+  .article {
+    left: 7%;
+    width: 85%;
+    transform: translateY(-50%);
+  }
+  .article h2 {
+    font-size: 2.3em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .banner-back {
+    padding: 0;
+  }
+  .banner {
+    width: 100%;
+  }
+  .article {
+    left: 0;
+    width: 96%;
+  }
+  .article h2 {
+    font-size: 35px;
+  }
+  .article .brief {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .article {
+    left: 0;
+    width: 96%;
+    padding: 20px;
+  }
+  .article h2 {
+    font-size: 25px;
+  }
+  .article .brief {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}

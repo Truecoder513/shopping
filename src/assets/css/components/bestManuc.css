@@ -1,0 +1,49 @@
+.bestManuc {
+  margin-top: 100px;
+  display: flex;
+}
+.bestManuc .sofaLight {
+  width: 100%;
+  flex: 3.7;
+}
+.bestManuc .sofaLight img {
+  object-fit: cover;
+  height: 100%;
+}
+.bestManuc .info {
+  flex: 2.7;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary);
+}
+.bestManuc .info h2 {
+  font-size: 2.5em;
+}
+.bestManuc .info p {
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: justify;
+}
+.bestManuc .info .manuc {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 920px) {
+  .bestManuc {
+    display: flex;
+    flex-direction: column;
+  }
+  .bestManuc .info {
+    margin-top: -5px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .bestManuc .info h2 {
+    font-size: 1.5em;
+  }
+  .bestManuc .info p {
+    font-size: 14px;
+  }
+}

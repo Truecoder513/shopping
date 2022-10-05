@@ -1,0 +1,117 @@
+.footer {
+  background-color: var(--primary);
+  margin-top: 70px;
+}
+.footer .quality {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 100px;
+}
+.footer .quality::before {
+  content: "";
+  position: absolute;
+  width: 2%;
+  height: 100%;
+  background: white;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+.footer .quality h3 {
+  margin: 15px 0;
+}
+.footer .quality img {
+  width: 40px;
+  height: 40px;
+}
+.footer .quality p {
+  color: var(--lightdark);
+}
+.footer .bottom {
+  position: relative;
+  padding: 60px 100px;
+  padding-bottom: 0;
+  background-color: var(--footer);
+}
+.footer .bottom::before {
+  content: "";
+  position: absolute;
+  width: 2%;
+  height: 100%;
+  background: var(--primary);
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+.footer .bottom .top {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.footer .bottom .top .left p {
+  margin: 20px 0;
+  color: var(--footer-item);
+}
+.footer .bottom .top .left {
+  flex: 2;
+}
+
+.footer .bottom .top .left img {
+  width: 70px;
+}
+.footer .bottom .top .right {
+  flex: 4;
+  display: flex;
+  justify-content: space-around;
+}
+.footer .bottom .top .right h4 {
+  margin-bottom: 30px;
+}
+.footer .bottom .top .right li {
+  color: var(--footer-item);
+  margin: 20px 0;
+}
+.footer .copyright {
+  margin-top: 150px;
+  padding: 30px 0;
+  text-align: center;
+  color: var(--footer-item);
+}
+
+@media screen and (max-width: 1000px) {
+  .footer .quality {
+    font-size: 14px;
+  }
+  .footer .bottom .top {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .footer .quality {
+    padding: 30px;
+    font-size: 10px;
+  }
+  .footer .bottom {
+    padding: 50px;
+  }
+  .footer .copyright {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer .quality {
+    display: block;
+  }
+  .footer .quality div {
+    margin-top: 20px;
+  }
+  .footer .bottom .top {
+    display: block;
+  }
+  .footer .bottom .top .right {
+    margin-top: 40px;
+    display: block;
+  }
+}
