@@ -44,6 +44,11 @@ input::placeholder {
   bottom: 20px;
   right: 20px;
   z-index: 10000;
+  transition: 0.3s all ease;
+  opacity: 1;
+}
+.not-ready-to-back {
+  opacity: 0 !important;
 }
 .to-top img {
   width: 20px;

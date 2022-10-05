@@ -14,6 +14,13 @@
   justify-content: space-between;
   position: relative;
 }
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000000000;
+  transition: 2s ease all;
+}
 .logo {
   position: absolute;
   top: 0;

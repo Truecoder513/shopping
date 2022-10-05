@@ -24,6 +24,7 @@ import Footer from "./pages/components/Footer";
 import { useState } from "react";
 import Cart from "./pages/Cart";
 import "react-toastify/dist/ReactToastify.css";
+import Totop from "./pages/components/Totop";
 function App() {
   const location = useLocation();
   const [intoCart, setIntoCart] = useState(
@@ -70,9 +71,7 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       {(checkPathnameOnRouteWithNav() || location.pathname === "/") && (
-        <div className="to-top">
-          <img src={require("./assets/img/up.svg").default} alt="" />
-        </div>
+        <Totop />
       )}
       {(checkPathnameOnRouteWithNav() || location.pathname === "/") && (
         <Footer />

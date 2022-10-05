@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import { Menu } from "../../components/global/menu";
 
 const Navigation = (props) => {
+  let [scroll, setScroll] = useState(false);
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 240) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  });
   const { intoCart } = props;
   const [reveal, setReveal] = useState(false);
   const revealFunc = () => {
@@ -11,7 +19,7 @@ const Navigation = (props) => {
 
   return (
     <header>
-      <div className="navigation">
+      <div className={`navigation ${scroll ? "nav-fixed" : ""}`}>
         <div className={`menu ${reveal ? "reveal" : ""}`}>
           <div className="head">
             <div>My account</div>
