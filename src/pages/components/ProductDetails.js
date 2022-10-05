@@ -48,7 +48,7 @@ const ProductDetails = (props) => {
               const newProductToAdd = product;
               newProductToAdd.quantity = add;
               copy.push(newProductToAdd);
-              toast.success("Item add to cart 33");
+              toast.success("Item add to cart");
               localStorage.setItem("Cart", JSON.stringify(copy));
               navigate("/Cart");
 
@@ -77,7 +77,7 @@ const ProductDetails = (props) => {
       <div className="left">
         <div className="info">
           <p className="nom">{product.nom}</p>
-          <p className="price">${product.price}</p>
+          <p className="price">{product.price}</p>
           <p className="category">
             Category : <span>{product.type}</span>
           </p>
