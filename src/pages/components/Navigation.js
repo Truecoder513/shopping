@@ -5,7 +5,7 @@ import { Menu } from "../../components/global/menu";
 const Navigation = (props) => {
   let [scroll, setScroll] = useState(false);
   window.addEventListener("scroll", () => {
-    if (window.scrollY >= 240) {
+    if (window.scrollY >= 40) {
       setScroll(true);
     } else {
       setScroll(false);
@@ -44,7 +44,7 @@ const Navigation = (props) => {
         </div>
         <div className="nav-container">
           <div className="logo">
-            <img src={require("../../assets/img/logo.webp")} alt="" />
+            <img src={require("../../assets/img/logo.jpg")} alt="" />
           </div>
           <div className="routes">
             <Menu />

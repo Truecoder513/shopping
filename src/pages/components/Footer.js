@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="bottom">
         <div className="top">
           <div className="left">
-            <img src={require("../../assets/img/logo2.webp")} alt="" />
+            <img src={require("../../assets/img/logo.jpg")} alt="" />
             <p>
               {" "}
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
