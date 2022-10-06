@@ -1,4 +1,3 @@
-import { computeHeadingLevel } from "@testing-library/react";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { toast, ToastContainer } from "react-toastify";
@@ -7,6 +6,8 @@ import { SimpleButton } from "../../components/global/button";
 const ProductDetails = (props) => {
   const { product, setIntoCart, intoCart } = props;
   const navigate = useNavigate();
+
+  let into = getProductQuantity(product.id);
 
   function getProductQuantity(id) {
     let quantity = 0;
@@ -77,7 +78,7 @@ const ProductDetails = (props) => {
           <p onClick={plus}>+</p>
         </div>
         <SimpleButton
-          content="ADD TO CART"
+          content={into > 0 ? "UPDATE QUANTITY" : "ADD TO CART"}
           className="butArt"
           onClick={addToCart}
           disabled={true}
