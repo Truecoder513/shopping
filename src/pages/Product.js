@@ -3,7 +3,8 @@ import { PageLocale } from "../components/global/pageLocale";
 import { SectionTitle, LinkButton } from "../components/global/button";
 import Card from "./components/Card";
 
-const Product = () => {
+const Product = (props) => {
+  const { intoCart, setIntoCart } = props;
   return (
     <div>
       <PageLocale page="Home > Product" />
@@ -12,7 +13,7 @@ const Product = () => {
         info="Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla."
         className="sectionTitle"
       />
-      <Card />
+      <Card intoCart={intoCart} setIntoCart={setIntoCart} />
       <LinkButton content="DISCOVER MORE" className="butPro" />
     </div>
   );

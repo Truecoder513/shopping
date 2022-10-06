@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Products from "../../data/Products";
 import { Link } from "react-router-dom";
 import { SimpleButton } from "../../components/global/button";
-import { ToastContainer } from "react-toastify";
-const Card = () => {
+import { ToastContainer, toast } from "react-toastify";
+const Card = (props) => {
+  const { intoCart, setIntoCart } = props;
   const [hover, setHover] = useState(0);
   const produtChoice = (index) => {
     switch (index) {
@@ -40,8 +41,25 @@ const Card = () => {
   };
   const [choice, setChoice] = useState("sofa");
   const filtered = Products.filter((product) => product.type === choice);
-  function speedAdd(e, index) {
+  function speedAdd(e, product) {
     e.preventDefault();
+
+    const copy = [...intoCart];
+    const filtered = copy.findIndex((el) => el.id === product.id);
+
+    if (filtered >= 0) {
+      copy[filtered].quantity = copy[filtered].quantity + 1;
+      toast.success("Added one more quantity for this item");
+      localStorage.setItem("Cart", JSON.stringify(copy));
+      setIntoCart(copy);
+    } else {
+      const newProductToAdd = product;
+      newProductToAdd.quantity = 1;
+      copy.push(newProductToAdd);
+      toast.success("Added to cart");
+      localStorage.setItem("Cart", JSON.stringify(copy));
+      setIntoCart(copy);
+    }
   }
   return (
     <div>
@@ -68,7 +86,7 @@ const Card = () => {
             <SimpleButton
               className="add-to-cart"
               content="Add-to cart"
-              onClick={(e) => speedAdd(e, index)}
+              onClick={(e) => speedAdd(e, product)}
             />
           </Link>
         ))}

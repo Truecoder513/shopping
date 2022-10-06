@@ -30,7 +30,6 @@ const Navigation = (props) => {
             <div className="bars" onClick={revealFunc}>
               <span>Menu</span>
               <span>
-                {" "}
                 <img
                   src={require("../../assets/img/menu.svg").default}
                   alt=""
@@ -39,7 +38,7 @@ const Navigation = (props) => {
             </div>
           </div>
           <div style={reveal ? { display: "block" } : { display: "none" }}>
-            <Menu />
+            <Menu setReveal={setReveal} reveal={reveal} />
           </div>
         </div>
         <div className="nav-container">

@@ -54,8 +54,14 @@ function App() {
         <Navigation intoCart={intoCart} />
       )}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Product" element={<Product />} />
+        <Route
+          path="/"
+          element={<Home intoCart={intoCart} setIntoCart={setIntoCart} />}
+        />
+        <Route
+          path="/Product"
+          element={<Product intoCart={intoCart} setIntoCart={setIntoCart} />}
+        />
         <Route path="/About" element={<About />} />
         <Route path="/Page" element={<Page />} />
         <Route path="/Blog" element={<Blog />} />

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
-export function Menu() {
+export function Menu(props) {
+  const { setReveal, reveal } = props;
   return (
     <ul>
       {[
@@ -11,7 +12,7 @@ export function Menu() {
         { route: "/Blog", name: "Blog" },
         { route: "/Contact", name: "Contact" },
       ].map((item, index) => (
-        <NavLink to={item.route} key={index}>
+        <NavLink to={item.route} key={index} onClick={() => setReveal(!reveal)}>
           <li>{item.name}</li>
         </NavLink>
       ))}
